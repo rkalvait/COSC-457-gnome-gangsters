@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 2f2f2401d2ea7414286de11d9471a7f9
+timeCreated: 1446685736
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Gnome SpriteSheet_0
+    21300002: Gnome SpriteSheet_1
+    21300004: Gnome SpriteSheet_2
+    21300006: Gnome SpriteSheet_3
+    21300008: Gnome SpriteSheet_4
+    21300010: Gnome SpriteSheet_5
+    21300012: Gnome SpriteSheet_6
+    21300014: Gnome SpriteSheet_7
+    21300016: Gnome SpriteSheet_8
+    21300018: Gnome SpriteSheet_9
+    21300020: Gnome SpriteSheet_10
+    21300022: Gnome SpriteSheet_11
+    21300024: Gnome SpriteSheet_12
+    21300026: Gnome SpriteSheet_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 10
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Gnome SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 293
+        width: 25
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 293
+        width: 26
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 293
+        width: 24
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 265
+        width: 18
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 265
+        width: 19
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 265
+        width: 18
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 265
+        width: 17
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 265
+        width: 16
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 265
+        width: 17
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 265
+        width: 18
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 265
+        width: 16
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 265
+        width: 15
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 265
+        width: 14
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gnome SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 265
+        width: 19
+        height: 27
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
