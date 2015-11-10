@@ -94,9 +94,15 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		//Debug.Log("enter");
+		Debug.Log("enter");
+		GameObject collided_with = other.gameObject;
+		if ( collided_with.tag == "Player" ) {
+			seen = true;
+			BoxCollider2D bc = GetComponent<BoxCollider2D> ();
+			bc.enabled = false;
+		}
 		//BoxCollider2D bc = GetComponent<BoxCollider2D> ();
-		seen = true;
+		//seen = true;
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
