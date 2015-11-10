@@ -3,10 +3,11 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody rb;
     public float Speed = 10f;
     private float movex = 0f;
-    private int jump_count = 1;
+	private int jump_count = 1;
+	public bool ____________________________;
+	public Rigidbody2D rb;
     //private float movey = 0f;
 
     // Use this for initialization
@@ -14,7 +15,7 @@ public class PlayerController : MonoBehaviour
     {
         //change gravity value
         Physics.gravity = new Vector3(0, -15.0f, 0);
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame

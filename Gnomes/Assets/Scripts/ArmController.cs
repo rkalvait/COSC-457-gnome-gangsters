@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class ArmController : MonoBehaviour {
+
+	public Camera camera;
     public GameObject player;
     float angleX, angleY, angle;
     public float distFromCamera = 10.0f;
@@ -20,11 +22,11 @@ public class ArmController : MonoBehaviour {
         Vector3 mousePos = Input.mousePosition;
 
         //To make mousePos relative to center of screen
-        mousePos.x -= Screen.width / 2;
-        mousePos.y -= Screen.height / 2;
+        //mousePos.x -= Screen.width / 2;
+        //mousePos.y -= Screen.height / 2;
 
         //To make mousePos relative to transform
-        mousePos += transform.position;
+		mousePos -= camera.WorldToScreenPoint (transform.position);
         angle = Vector3.Angle(mousePos, Vector3.up);
 
         //For 360 degree angle
@@ -33,17 +35,17 @@ public class ArmController : MonoBehaviour {
 
         //make weapon same length on each side
         if (angle <= 180)
-        {
-            transform.position = player.transform.position + new Vector3(0.3f, 0, 0);
-            transform.position = new Vector3(transform.position.x - 0.6f, transform.position.y, transform.position.z);
+		{
+			player.transform.localScale = new Vector3(-1f, 1f, 1f);
+			transform.rotation = Quaternion.Euler(0, 0, 90-angle);
         }
         else
-        {
-            transform.position = player.transform.position + new Vector3(0.3f, 0, 0);
+		{
+			player.transform.localScale = new Vector3(1f, 1f, 1f);
+			transform.rotation = Quaternion.Euler(0, 0, angle+90);
         }
 
         
-        transform.rotation = Quaternion.Euler(0, 0, angle-90);
 
         //Fire projectile
         if (Input.GetButtonDown("Fire1"))

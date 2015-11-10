@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2f2f2401d2ea7414286de11d9471a7f9
-timeCreated: 1446685736
+timeCreated: 1447134234
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,6 +18,7 @@ TextureImporter:
     21300022: Gnome SpriteSheet_11
     21300024: Gnome SpriteSheet_12
     21300026: Gnome SpriteSheet_13
+    21300028: Gun_Arm
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -71,8 +72,8 @@ TextureImporter:
         y: 293
         width: 25
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_1
       rect:
@@ -81,8 +82,8 @@ TextureImporter:
         y: 293
         width: 26
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_2
       rect:
@@ -91,8 +92,8 @@ TextureImporter:
         y: 293
         width: 24
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_3
       rect:
@@ -101,8 +102,8 @@ TextureImporter:
         y: 265
         width: 18
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_4
       rect:
@@ -111,8 +112,8 @@ TextureImporter:
         y: 265
         width: 19
         height: 25
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_5
       rect:
@@ -121,8 +122,8 @@ TextureImporter:
         y: 265
         width: 18
         height: 25
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_6
       rect:
@@ -131,8 +132,8 @@ TextureImporter:
         y: 265
         width: 17
         height: 25
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_7
       rect:
@@ -141,8 +142,8 @@ TextureImporter:
         y: 265
         width: 16
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_8
       rect:
@@ -151,8 +152,8 @@ TextureImporter:
         y: 265
         width: 17
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_9
       rect:
@@ -161,8 +162,8 @@ TextureImporter:
         y: 265
         width: 18
         height: 25
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_10
       rect:
@@ -171,8 +172,8 @@ TextureImporter:
         y: 265
         width: 16
         height: 25
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_11
       rect:
@@ -181,8 +182,8 @@ TextureImporter:
         y: 265
         width: 15
         height: 25
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_12
       rect:
@@ -191,8 +192,8 @@ TextureImporter:
         y: 265
         width: 14
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gnome SpriteSheet_13
       rect:
@@ -201,8 +202,18 @@ TextureImporter:
         y: 265
         width: 19
         height: 27
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Gun_Arm
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 301
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
