@@ -68,7 +68,7 @@ public class EnemyAI : MonoBehaviour {
 	void Movement() {
 		//Debug.Log("Movement()");
 		float h = 1;
-		anim.SetFloat ("Speed", Mathf.Abs (h));
+		//anim.SetFloat ("Speed", Mathf.Abs (h));
 
 		if (facing_right == true) {
 			h = 1;

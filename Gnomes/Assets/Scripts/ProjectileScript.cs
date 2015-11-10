@@ -22,7 +22,7 @@ public class ProjectileScript : MonoBehaviour {
 		if (collision.tag != "player")
 	        Destroy(this.gameObject);
 
-		if (collision.tag == "mob")
+		if (collision.tag == "Mob")
 			Destroy (collision.gameObject);
     }
 }
