@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+	public static GameObject player;
+
     public float Speed = 10f;
     private float movex = 0f;
 	private int jump_count = 1;
@@ -13,6 +15,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		player = this.gameObject;
         //change gravity value
         Physics.gravity = new Vector3(0, -15.0f, 0);
         rb = GetComponent<Rigidbody2D>();

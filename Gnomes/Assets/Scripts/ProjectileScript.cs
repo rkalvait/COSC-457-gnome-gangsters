@@ -17,8 +17,12 @@ public class ProjectileScript : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(this.gameObject);
+		if (collision.tag != "player")
+	        Destroy(this.gameObject);
+
+		if (collision.tag == "mob")
+			Destroy (collision.gameObject);
     }
 }

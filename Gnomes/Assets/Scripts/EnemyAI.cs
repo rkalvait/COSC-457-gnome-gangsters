@@ -62,11 +62,11 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	void Shoot() {
-		Debug.Log("Shoot()");
+		//Debug.Log("Shoot()");
 	}
 
 	void Movement() {
-		Debug.Log("Movement()");
+		//Debug.Log("Movement()");
 		float h = 1;
 		anim.SetFloat ("Speed", Mathf.Abs (h));
 
@@ -100,7 +100,7 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
-		Debug.Log("stay");
+		//Debug.Log("stay");
 	}
 
 }

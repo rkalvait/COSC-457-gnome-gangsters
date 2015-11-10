@@ -52,8 +52,13 @@ public class ArmController : MonoBehaviour {
         {
             GameObject clone;
             clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
-            clone.transform.LookAt(mousePos);
-            clone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * fireballSpeed);
+			clone.transform.LookAt(mousePos);//make weapon same length on each side
+			if (angle <= 180)
+			{
+            	clone.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.left * fireballSpeed);
+			} else {
+				clone.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * fireballSpeed);
+			}
         }
 
 
