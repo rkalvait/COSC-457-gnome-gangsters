@@ -207,8 +207,51 @@ Prefab:
       propertyPath: fire_rate
       value: .75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11403554, guid: 3be44e90d1f1e854092666c58135ea68, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3be44e90d1f1e854092666c58135ea68, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &974115447
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 429828, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .24978216
+      objectReference: {fileID: 0}
+    - target: {fileID: 429828, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.53477848
+      objectReference: {fileID: 0}
+    - target: {fileID: 429828, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429828, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429828, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429828, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429828, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429828, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1196662979
 GameObject:
@@ -314,6 +357,29 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 153526, guid: 3be44e90d1f1e854092666c58135ea68, type: 2}
   m_PrefabInternal: {fileID: 926181517}
+--- !u!114 &1618369628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1618369627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c633ba74a24e424aa356c8b19fc4a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facing_right: 1
+  jump: 1
+  health: 100
+  move_force: 365
+  max_speed: 4
+  seen: 0
+  in_range: 0
+  range: 1
+  weapon: 0
+  bullet: {fileID: 104368, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+  bullet_force: 0
+  fire_rate: 0
 --- !u!58 &1618369633
 CircleCollider2D:
   m_ObjectHideFlags: 0
