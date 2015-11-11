@@ -8,7 +8,7 @@ public class ArmController : MonoBehaviour {
     float angleX, angleY, angle;
     public float distFromCamera = 10.0f;
     public GameObject projectile;
-    float fireballSpeed = 1000.0f;
+    float fireballSpeed = 25.0f;
 	// Use this for initialization
 	void Start () {
 	
@@ -52,13 +52,9 @@ public class ArmController : MonoBehaviour {
         {
             GameObject clone;
             clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
-			clone.transform.LookAt(mousePos);//make weapon same length on each side
-			if (angle <= 180)
-			{
-            	clone.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.left * fireballSpeed);
-			} else {
-				clone.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.right * fireballSpeed);
-			}
+            clone.transform.LookAt(mousePos);
+            //clone.GetComponent<Rigidbody2D>().AddForce(new Vector2(stupid.x, stupid.y) * fireballSpeed, 0);
+            clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
         }
 
 

@@ -434,7 +434,6 @@ GameObject:
   - 60: {fileID: 621604897}
   - 95: {fileID: 621604896}
   - 212: {fileID: 621604895}
-  - 114: {fileID: 621604894}
   - 114: {fileID: 621604898}
   m_Layer: 0
   m_Name: Basic_Gnome
@@ -443,18 +442,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &621604894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11453674, guid: 21b769533dd98f04da2affa257657538,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 621604893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c633ba74a24e424aa356c8b19fc4a59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &621604895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -534,15 +521,15 @@ MonoBehaviour:
   facing_right: 1
   jump: 1
   health: 100
-  move_force: 365
+  move_force: 200
   max_speed: 4
-  seen: 0
+  seen: 1
   in_range: 0
-  range: 1
+  range: 7
   weapon: 0
   bullet: {fileID: 104368, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
-  bullet_force: 0
-  fire_rate: 0
+  bullet_force: 1750
+  fire_rate: .5
 --- !u!61 &621604899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -784,7 +771,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 919196590}
   - 212: {fileID: 919196594}
-  - 114: {fileID: 919196593}
   - 50: {fileID: 919196592}
   - 61: {fileID: 919196591}
   - 95: {fileID: 919196595}
@@ -838,17 +824,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &919196593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 919196589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e69bceaded7b534c8c02a7fba3487e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &919196594
 SpriteRenderer:
   m_ObjectHideFlags: 0
