@@ -323,6 +323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1990910917}
+  - {fileID: 562928189}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!4 &323632862 stripped
@@ -421,6 +422,47 @@ Transform:
   - {fileID: 1522512050}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &562928187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 562928189}
+  - 61: {fileID: 562928188}
+  m_Layer: 0
+  m_Name: upper
+  m_TagString: bounds
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &562928188
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 562928187}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 2.28672409, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 5.57344151, y: 1}
+--- !u!4 &562928189
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 562928187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40.7700005, y: 3.1400001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 313031243}
+  m_RootOrder: 1
 --- !u!1 &621604893
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +478,7 @@ GameObject:
   - 212: {fileID: 621604895}
   - 114: {fileID: 621604894}
   - 114: {fileID: 621604898}
+  - 114: {fileID: 621604902}
   m_Layer: 0
   m_Name: Basic_Gnome
   m_TagString: Mob
@@ -586,6 +629,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &621604902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 621604893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f79e7a008dd1b8409673c31c9928a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facing_right: 1
+  jump: 1
+  health: 100
+  move_force: 365
+  max_speed: 4
+  seen: 0
+  in_range: 0
+  range: 1
+  weapon: 0
+  bullet: {fileID: 0}
+  bullet_force: 0
+  fire_rate: 0
 --- !u!4 &692461416 stripped
 Transform:
   m_PrefabParentObject: {fileID: 426218, guid: 68ef351960c51bb4ca6580cda4b6d86a, type: 2}
@@ -647,6 +713,7 @@ GameObject:
   - 212: {fileID: 815026493}
   - 61: {fileID: 815026496}
   - 50: {fileID: 815026495}
+  - 114: {fileID: 815026497}
   m_Layer: 0
   m_Name: Secret_Wall
   m_TagString: Untagged
@@ -721,6 +788,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.70000005, y: .370000005}
+--- !u!114 &815026497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815026492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0720c815184b574091c762be2330e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMoving: 0
 --- !u!1001 &902023326
 Prefab:
   m_ObjectHideFlags: 0
@@ -784,7 +863,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 919196590}
   - 212: {fileID: 919196594}
-  - 114: {fileID: 919196593}
   - 50: {fileID: 919196592}
   - 61: {fileID: 919196591}
   - 95: {fileID: 919196595}
@@ -832,23 +910,12 @@ Rigidbody2D:
   m_Mass: .870000005
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: .519999981
+  m_GravityScale: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &919196593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 919196589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e69bceaded7b534c8c02a7fba3487e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &919196594
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1351,7 +1418,7 @@ GameObject:
   - 4: {fileID: 1990910917}
   - 61: {fileID: 1990910916}
   m_Layer: 0
-  m_Name: upper
+  m_Name: lower
   m_TagString: bounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
