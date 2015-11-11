@@ -528,4 +528,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c633ba74a24e424aa356c8b19fc4a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
+  facing_right: 1
+  jump: 1
+  health: 100
+  move_force: 365
+  max_speed: 4
+  seen: 0
+  in_range: 0
+  range: 1
+  weapon: 0
