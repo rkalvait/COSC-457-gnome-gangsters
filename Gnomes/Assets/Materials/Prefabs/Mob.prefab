@@ -12,6 +12,8 @@ GameObject:
   - 50: {fileID: 5072234}
   - 114: {fileID: 11403554}
   - 212: {fileID: 21250622}
+  - 58: {fileID: 5865550}
+  - 95: {fileID: 9580850}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.88193953, y: -1.2640835, z: 0}
+  m_LocalPosition: {x: -4.44999981, y: -1.35000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,9 +48,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &6155278
-BoxCollider2D:
+  m_Constraints: 4
+--- !u!58 &5865550
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -57,9 +59,39 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 5, y: 0}
+  m_Offset: {x: 0, y: -.850000024}
   serializedVersion: 2
-  m_Size: {x: 10, y: 1}
+  m_Radius: .5
+--- !u!61 &6155278
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153526}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 7.5, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 15, y: 1}
+--- !u!95 &9580850
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153526}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef3ebc1da1508514b8580dce2258bda8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11403554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,19 +100,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 153526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c633ba74a24e424aa356c8b19fc4a59, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f79e7a008dd1b8409673c31c9928a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   facing_right: 1
   jump: 1
   health: 100
-  move_force: 365
-  max_speed: 4
+  move_force: 200
+  max_speed: 3
   seen: 0
   in_range: 0
-  range: 5
+  range: 7
   weapon: 0
-  bullet: {fileID: 0}
+  bullet: {fileID: 104368, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+  bullet_force: 1750
+  fire_rate: .5
 --- !u!212 &21250622
 SpriteRenderer:
   m_ObjectHideFlags: 1

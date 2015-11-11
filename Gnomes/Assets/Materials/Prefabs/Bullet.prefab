@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 10
   speed: 15
-  bullet: {fileID: 0}
+  bullet: {fileID: 104368}
 --- !u!212 &21201572
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -101,6 +101,10 @@ Prefab:
       propertyPath: duration
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 104368}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 104368}
