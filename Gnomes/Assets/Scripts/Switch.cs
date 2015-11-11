@@ -7,7 +7,7 @@ public class Switch : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D col) {
 		if (col.tag == "projectile") {
-
+			panel.GetComponent<Rigidbody2D>().WakeUp();
 		}
 	}
 }
