@@ -407,6 +407,7 @@ GameObject:
   - 95: {fileID: 621604896}
   - 212: {fileID: 621604895}
   - 114: {fileID: 621604894}
+  - 114: {fileID: 621604898}
   m_Layer: 0
   m_Name: Basic_Gnome
   m_TagString: Mob
@@ -491,6 +492,29 @@ PolygonCollider2D:
       - {x: .896987677, y: -1.28268814}
       - {x: .580697298, y: -.772706985}
       - {x: .480304003, y: .320515156}
+--- !u!114 &621604898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 621604893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f79e7a008dd1b8409673c31c9928a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facing_right: 1
+  jump: 1
+  health: 100
+  move_force: 365
+  max_speed: 4
+  seen: 0
+  in_range: 0
+  range: 1
+  weapon: 0
+  bullet: {fileID: 104368, guid: a325e7ee4e56a4541abeb7a048c5b88e, type: 2}
+  bullet_force: 0
+  fire_rate: 0
 --- !u!61 &621604899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -736,6 +760,7 @@ GameObject:
   - 50: {fileID: 919196592}
   - 61: {fileID: 919196591}
   - 95: {fileID: 919196595}
+  - 114: {fileID: 919196596}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -839,6 +864,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &919196596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 919196589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b3c86217b51af4b9f66e72e57f51f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 10
+  ____________________________: 0
+  rb: {fileID: 0}
 --- !u!1001 &940685623
 Prefab:
   m_ObjectHideFlags: 0
