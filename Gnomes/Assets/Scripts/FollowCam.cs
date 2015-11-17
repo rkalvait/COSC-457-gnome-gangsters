@@ -15,7 +15,7 @@ public class FollowCam : MonoBehaviour {
 	void Update () {
 		Vector3 destination;
 		destination.x = poi.transform.position.x;
-		destination.y = poi.transform.position.y;
+		destination.y = poi.transform.position.y-(poi.transform.position.y/3);
 		destination.z = transform.position.z;
 		transform.position = destination;
 	}
