@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MovePanel : MonoBehaviour {
 		
+	public float speed = 0.1f;
 	private bool up = false;
 	public bool isMoving = false;
 
@@ -11,9 +12,9 @@ public class MovePanel : MonoBehaviour {
 		if (!isMoving)
 			return;
 		if (up) {
-			gameObject.transform.position += new Vector3 (0f, 0.2f, 0f);
+			gameObject.transform.position += new Vector3 (0f, speed, 0f);
 		} else {
-			gameObject.transform.position += new Vector3 (0f, -0.2f, 0f);
+			gameObject.transform.position += new Vector3 (0f, -speed, 0f);
 		}
 	}
 
