@@ -12,9 +12,11 @@ public class MovePanel : MonoBehaviour {
 		if (!isMoving)
 			return;
 		if (up) {
-			gameObject.transform.position += new Vector3 (0f, speed, 0f);
+			//gameObject.transform.position += new Vector3 (0f, speed, 0f);
+			gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, speed, 0f);
 		} else {
-			gameObject.transform.position += new Vector3 (0f, -speed, 0f);
+			//gameObject.transform.position += new Vector3 (0f, -speed, 0f);
+			gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0f, -speed, 0f);
 		}
 	}
 
