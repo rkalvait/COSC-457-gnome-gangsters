@@ -4,11 +4,13 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
 	static public PlayerController player;
+
     public float Speed = 10f;
-    private float movex = 0f;
-	private int jump_count = 1;
 	public bool ____________________________;
 	public Rigidbody2D rb;
+	public bool isJumping = false;
+	private float movex = 0f;
+	private int jump_count = 1;
     //private float movey = 0f;
 
     // Use this for initialization
@@ -35,15 +37,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //player keeps moving if in air, otherwise stops
-            if (rb.velocity.y == 0)
-            {
-                movex = 0;
-            }
-            //movey = 0;
+            movex = 0;
         }
         //jump if not already in air
-        if (Input.GetKeyDown(KeyCode.Space) && rb.velocity.y == 0)
+        if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)//rb.velocity.y == 0)
         {
             rb.AddForce(new Vector2(0, 400));
         }
