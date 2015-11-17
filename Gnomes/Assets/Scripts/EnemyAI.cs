@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour {
 
 	public float health = 100f;
 
-	public float move_force = 365f;
+	public float move_force = 50f;
 	public float max_speed = 4f;
 	public bool seen = false;
 	public bool in_range = false;
@@ -47,11 +47,15 @@ public class EnemyAI : MonoBehaviour {
 		if (seen) {
 
 			Vector3 player_pos = PlayerController.player.transform.position;
-			float distance = Vector3.Distance(transform.position, player_pos);
-			if (distance < range)
+			float distance = Vector3.Distance (transform.position, player_pos);
+			if (distance < range) {
+				Debug.Log ("in range");
 				in_range = true;
-			else
+				rb2d.velocity = (Vector2.right * 0);
+			} else {
+				Debug.Log("out of range");
 				in_range = false;
+			}
 
 			if (player_pos.x < transform.position.x && facing_right == true)
 				Flip();
@@ -88,9 +92,10 @@ public class EnemyAI : MonoBehaviour {
 			h = -1;
 		}
 		if (h*rb2d.velocity.x < max_speed)
-			rb2d.AddForce (Vector2.right * h * move_force);
+			rb2d.velocity = (Vector2.right * h * move_force);
 		if (Mathf.Abs (rb2d.velocity.x) > max_speed)
-			rb2d.velocity = new Vector2 (Mathf.Sign (rb2d.velocity.x) * max_speed, rb2d.velocity.x);
+			rb2d.velocity = (Vector2.right * h * move_force);
+			///rb2d.velocity = new Vector2 (Mathf.Sign (rb2d.velocity.x) * max_speed, rb2d.velocity.x);
 		//transform.Translate (Vector2.right * speed * Time.deltaTime);
 
 		if (h > 0 && !facing_right) {
