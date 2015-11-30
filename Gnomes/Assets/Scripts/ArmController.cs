@@ -10,6 +10,8 @@ public class ArmController : MonoBehaviour {
     public GameObject projectile;
     public GameObject projectile2;
     float fireballSpeed = 25.0f;
+    Vector3 mousePos;
+    Vector3 anglePos;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,7 +19,7 @@ public class ArmController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        /*
         //transform.position = player.transform.position + new Vector3(0.3f, 0, 0);
 
         Vector3 mousePos = Input.mousePosition;
@@ -29,6 +31,12 @@ public class ArmController : MonoBehaviour {
         //To make mousePos relative to transform
 		mousePos -= cam.WorldToScreenPoint (transform.position);
         angle = Vector3.Angle(mousePos, Vector3.up);
+        */
+
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        anglePos = Input.mousePosition;
+        anglePos -= cam.WorldToScreenPoint(transform.position);
+        angle = Vector3.Angle(anglePos, Vector3.up);
 
         //For 360 degree angle
         if (mousePos.x > 0)
@@ -38,12 +46,14 @@ public class ArmController : MonoBehaviour {
         if (angle <= 180)
 		{
 			player.transform.localScale = new Vector3(-1f, 1f, 1f);
-			transform.rotation = Quaternion.Euler(0, 0, 90-angle);
+			//transform.rotation = Quaternion.Euler(0, 0, 90-angle);
+            transform.rotation = Quaternion.Euler(0, 0, 90-angle);
         }
         else
 		{
 			player.transform.localScale = new Vector3(1f, 1f, 1f);
-			transform.rotation = Quaternion.Euler(0, 0, angle+90);
+            //transform.rotation = Quaternion.Euler(0, 0, angle+90);
+            transform.rotation = Quaternion.Euler(0, 0, 90+angle);
         }
 
         
