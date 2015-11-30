@@ -204,6 +204,7 @@ MonoBehaviour:
   - {fileID: 167822, guid: c7f0d2595a4d1ae4995f2990b0e3cf6b, type: 2}
   nTrees: 500
   width: 100
+  depth: .699999988
 --- !u!1 &1178623842
 GameObject:
   m_ObjectHideFlags: 0
