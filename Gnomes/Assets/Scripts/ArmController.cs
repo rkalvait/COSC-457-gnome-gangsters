@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ArmController : MonoBehaviour {
 
-	public Camera camera;
     public GameObject player;
     float angleX, angleY, angle;
     public float distFromCamera = 10.0f;
@@ -26,7 +25,7 @@ public class ArmController : MonoBehaviour {
         //mousePos.y -= Screen.height / 2;
 
         //To make mousePos relative to transform
-		mousePos -= camera.WorldToScreenPoint (transform.position);
+		mousePos -= FollowCam.cam.WorldToScreenPoint (transform.position);
         angle = Vector3.Angle(mousePos, Vector3.up);
 
         //For 360 degree angle

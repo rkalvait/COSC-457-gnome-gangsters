@@ -891,6 +891,7 @@ GameObject:
   - 95: {fileID: 919196595}
   - 114: {fileID: 919196596}
   - 60: {fileID: 919196593}
+  - 114: {fileID: 919196597}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1019,6 +1020,19 @@ MonoBehaviour:
   ____________________________: 0
   rb: {fileID: 0}
   isJumping: 0
+--- !u!114 &919196597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 919196589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0eacaf6aec0914bb53ceb58b735695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ______________________: 0
+  poi: {fileID: 919196589}
 --- !u!1001 &940685623
 Prefab:
   m_ObjectHideFlags: 0
