@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
 		player = this;
         //change gravity value
-        Physics.gravity = new Vector3(0, -15.0f, 0);
+        //Physics.gravity = new Vector3(0, -15.0f, 0);
         rb = GetComponent<Rigidbody2D>();
     }
 
