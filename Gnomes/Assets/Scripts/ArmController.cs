@@ -8,6 +8,7 @@ public class ArmController : MonoBehaviour {
     float angleX, angleY, angle;
     public float distFromCamera = 10.0f;
     public GameObject projectile;
+    public GameObject projectile2;
     float fireballSpeed = 25.0f;
 	// Use this for initialization
 	void Start () {
@@ -57,7 +58,13 @@ public class ArmController : MonoBehaviour {
             clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
         }
 
-
+        if (Input.GetButtonDown("Fire2"))
+        {
+            GameObject clone;
+            clone = (GameObject)Instantiate(projectile2, transform.position, transform.rotation);
+            clone.transform.LookAt(mousePos);
+            clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
+        }
     }
 
 }

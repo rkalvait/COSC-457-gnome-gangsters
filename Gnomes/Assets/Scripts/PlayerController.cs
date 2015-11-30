@@ -28,31 +28,44 @@ public class PlayerController : MonoBehaviour
         //A to move left
         if (Input.GetKey(KeyCode.A))
         {
-            movex = -1;
+            movex = -1f;
             //D to move right
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            movex = 1;
+            movex = 1f;
         }
         else
         {
-            movex = 0;
+            if (movex > 0)
+            {
+                movex -= 0.015f;
+            }
+            if (movex < 0)
+            {
+                movex += 0.015f;
+            }
+            if (!isJumping)
+            {
+                movex = 0f;
+            }
         }
         //jump if not already in air
-        if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)//rb.velocity.y == 0)
+        if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)
         {
             rb.AddForce(new Vector2(0, 400));
+        }
+        //make sure player does not get stuck to ground
+        if (rb.velocity.y <= 0.01 && rb.velocity.y >= -0.01)
+        {
+            isJumping = false;
         }
 
     }
 
     void FixedUpdate()
     {
-        //movex = Input.GetAxis ("Horizontal");
-        //movey = Input.GetAxis ("Vertical");
         rb.velocity = new Vector2(movex * Speed, rb.velocity.y);
-        //rb.velocity = movex * Speed;
     }
 
 	void OnTriggerEnter2D(Collider2D collision)
