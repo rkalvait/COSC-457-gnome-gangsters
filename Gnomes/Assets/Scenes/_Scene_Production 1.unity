@@ -204,6 +204,7 @@ MonoBehaviour:
   - {fileID: 167822, guid: c7f0d2595a4d1ae4995f2990b0e3cf6b, type: 2}
   nTrees: 500
   width: 100
+  depth: 0
 --- !u!1 &1178623842
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +275,10 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 691445148}
+    - target: {fileID: 11469292, guid: bd6115c6cd0a6754eba28dcff12ff102, type: 2}
+      propertyPath: projectile2
+      value: 
+      objectReference: {fileID: 127916, guid: 368d178f79270804f94a2e45f5739aa9, type: 2}
     m_RemovedComponents:
     - {fileID: 11474750, guid: bd6115c6cd0a6754eba28dcff12ff102, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bd6115c6cd0a6754eba28dcff12ff102, type: 2}
