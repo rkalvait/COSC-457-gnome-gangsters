@@ -19,8 +19,10 @@ public class ProjectileScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-		if (collision.tag != "player")
-	        Destroy(this.gameObject);
+		if (collision.tag != "Player" && collision.tag != "Fireball") {
+			Debug.Log(collision);
+			Destroy (this.gameObject);
+		}
 
 		if (collision.tag == "Mob")
 			Destroy (collision.gameObject);

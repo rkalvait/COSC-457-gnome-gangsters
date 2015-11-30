@@ -70,20 +70,21 @@ public class PlayerController : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		Debug.Log ("should this be 2D");
+		//Debug.Log ("should this be 2D");
 		//GameObject collided_with = collision.gameObject;
 		if (collision.tag == "Bullet") {
 			Debug.Log ("is bullet");
 			float diff = collision.transform.position.x - transform.position.x;
 			if (diff < 0) {
 				Debug.Log ("if");
-				rb.AddForce (Vector2.right*10000);
-			}else{
+				rb.AddForce (Vector2.right * 10000);
+			} else {
 				Debug.Log ("else");
-				rb.AddForce (Vector2.left*10000);
+				rb.AddForce (Vector2.left * 10000);
 			}
-		} else
-			Debug.Log ("herpaderp");
+		} else {
+		}
+			//Debug.Log ("herpaderp");
 		//Destroy(this.gameObject);
 	}
 }
