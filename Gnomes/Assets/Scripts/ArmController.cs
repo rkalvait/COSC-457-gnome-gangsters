@@ -19,9 +19,8 @@ public class ArmController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
         /*
-        //transform.position = player.transform.position + new Vector3(0.3f, 0, 0);
-
         Vector3 mousePos = Input.mousePosition;
 
         //To make mousePos relative to center of screen
@@ -39,20 +38,18 @@ public class ArmController : MonoBehaviour {
         angle = Vector3.Angle(anglePos, Vector3.up);
 
         //For 360 degree angle
-        if (mousePos.x > 0)
+        if (anglePos.x > 0)
             angle = 360 - angle;
 
         //make weapon same length on each side
         if (angle <= 180)
 		{
 			player.transform.localScale = new Vector3(-1f, 1f, 1f);
-			//transform.rotation = Quaternion.Euler(0, 0, 90-angle);
             transform.rotation = Quaternion.Euler(0, 0, 90-angle);
         }
         else
 		{
 			player.transform.localScale = new Vector3(1f, 1f, 1f);
-            //transform.rotation = Quaternion.Euler(0, 0, angle+90);
             transform.rotation = Quaternion.Euler(0, 0, 90+angle);
         }
 
