@@ -55,10 +55,11 @@ public class PlayerController : MonoBehaviour
         //rb.velocity = movex * Speed;
     }
 
-	void OnCollisionEnter2D(Collision2D collision)
+	void OnTriggerEnter2D(Collider2D collision)
 	{
 		Debug.Log ("should this be 2D");
-		if (collision.gameObject.tag == "Bullet") {
+		//GameObject collided_with = collision.gameObject;
+		if (collision.tag == "Bullet") {
 			Debug.Log ("is bullet");
 			float diff = collision.transform.position.x - transform.position.x;
 			if (diff < 0) {

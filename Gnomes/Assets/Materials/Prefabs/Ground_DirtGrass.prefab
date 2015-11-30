@@ -8,8 +8,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 483086}
-  - 65: {fileID: 6508974}
   - 212: {fileID: 21230812}
+  - 61: {fileID: 6142530}
   m_Layer: 0
   m_Name: Ground_DirtGrass
   m_TagString: Untagged
@@ -24,23 +24,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.0699997, y: 2.50999999, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: .0399999991, y: -.670000017, z: 0}
+  m_LocalScale: {x: 10, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!65 &6508974
-BoxCollider:
+--- !u!61 &6142530
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107494}
+  m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.20000005, y: 1.20000005, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.27999997, y: 1.27999997}
 --- !u!212 &21230812
 SpriteRenderer:
   m_ObjectHideFlags: 1
