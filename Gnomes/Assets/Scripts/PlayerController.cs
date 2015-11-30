@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 	public Rigidbody2D rb;
 	public bool isJumping = false;
 	private float movex = 0f;
-	private int jump_count = 1;
+	//private int jump_count = 1;
     //private float movey = 0f;
 
     // Use this for initialization
@@ -54,4 +54,22 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(movex * Speed, rb.velocity.y);
         //rb.velocity = movex * Speed;
     }
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		Debug.Log ("should this be 2D");
+		if (collision.gameObject.tag == "Bullet") {
+			Debug.Log ("is bullet");
+			float diff = collision.transform.position.x - transform.position.x;
+			if (diff < 0) {
+				Debug.Log ("if");
+				rb.AddForce (Vector2.right*10000);
+			}else{
+				Debug.Log ("else");
+				rb.AddForce (Vector2.left*10000);
+			}
+		} else
+			Debug.Log ("herpaderp");
+		//Destroy(this.gameObject);
+	}
 }

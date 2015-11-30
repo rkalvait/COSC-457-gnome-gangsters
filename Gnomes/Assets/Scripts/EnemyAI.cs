@@ -27,14 +27,14 @@ public class EnemyAI : MonoBehaviour {
 	//public Transform ground_check;
 
 	//private bool grounded = false;
-	private Animator anim;
+	//private Animator anim;
 	private Rigidbody2D rb2d;
 	//private float movex = 0f;
 	//private float movey = 0f;
 	
 	// Use this for initialization
 	void Awake () {
-		anim = GetComponent<Animator>();
+		//anim = GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D>();
 	}
 	
@@ -49,11 +49,11 @@ public class EnemyAI : MonoBehaviour {
 			Vector3 player_pos = PlayerController.player.transform.position;
 			float distance = Vector3.Distance (transform.position, player_pos);
 			if (distance < range) {
-				Debug.Log ("in range");
+				//Debug.Log ("in range");
 				in_range = true;
 				rb2d.velocity = (Vector2.right * 0);
 			} else {
-				Debug.Log("out of range");
+				//Debug.Log("out of range");
 				in_range = false;
 			}
 
@@ -76,15 +76,15 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	void Shoot() {
-		Debug.Log("Shoot()");
+		//Debug.Log("Shoot()");bullet
 		GameObject clone = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
 		clone.GetComponent<Rigidbody2D>().AddRelativeForce(transform.right * bullet_force);
 	}
 
 	void Movement() {
-		Debug.Log("Movement()");
+		//Debug.Log("Movement()");
 		float h = 1;
-		anim.SetFloat ("Speed", Mathf.Abs (h));
+		//anim.SetFloat ("Speed", Mathf.Abs (h));
 
 		if (facing_right == true) {
 			h = 1;
@@ -118,7 +118,7 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("enter");
+		//Debug.Log("enter");
 		GameObject collided_with = other.gameObject;
 		if ( collided_with.tag == "Player" ) {
 			seen = true;
