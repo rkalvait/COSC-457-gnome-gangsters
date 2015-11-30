@@ -35,12 +35,15 @@ public class ParallaxTrees : MonoBehaviour {
 
 		for (int i=0; i<ret.Length; i++) {
 			float z = Random.Range(10,20);
-			float x = Random.Range(-width/2, width/2);// * depth * (z-10)/10f;
+			float x = Random.Range(-width/2, width/2) * (1 - (depth * (z-10)/10f));
 			GameObject tree = Instantiate(trees[(int)Mathf.Floor( Random.Range (0f,-0.001f + trees.Length))]);
 			float y = tree.transform.position.y;
 
 			tree.transform.position = new Vector3(x,y,z);
 			tree.GetComponent<SpriteRenderer>().color = new Color( (10+(20-z))/20f, (10+(20-z))/20f, (10+(20-z))/20f );
+
+			float direction = Mathf.Floor( Random.Range (0f, 1.999f));
+			tree.transform.localScale = new Vector3(-1 + (2 * direction), 1, 1);
 
 			ret[i] = tree;
 		}
