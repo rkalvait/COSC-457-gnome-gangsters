@@ -40,7 +40,9 @@ public class ParallaxTrees : MonoBehaviour {
 			float y = tree.transform.position.y;
 
 			tree.transform.position = new Vector3(x,y,z);
-			tree.GetComponent<SpriteRenderer>().color = new Color( (10+(19-z))/20f, (10+(19-z))/20f, (10+(19-z))/20f );
+			float value = (10+(19-z))/20f;
+			value = value*value*value;
+			tree.GetComponent<SpriteRenderer>().color = new Color( value, value, value );
 
 			float direction = Mathf.Floor( Random.Range (0f, 1.999f));
 			tree.transform.localScale = new Vector3(-1 + (2 * direction), 1, 1);
