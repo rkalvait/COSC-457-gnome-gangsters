@@ -9,6 +9,8 @@ TagManager:
   - Fireball
   - Bullet
   - bounds
+  - Block_Maker
+  - NoCollide
   layers:
   - Default
   - TransparentFX
