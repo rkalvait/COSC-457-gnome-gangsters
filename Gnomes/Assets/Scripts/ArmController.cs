@@ -20,17 +20,6 @@ public class ArmController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        /*
-        Vector3 mousePos = Input.mousePosition;
-
-        //To make mousePos relative to center of screen
-        //mousePos.x -= Screen.width / 2;
-        //mousePos.y -= Screen.height / 2;
-
-        //To make mousePos relative to transform
-		mousePos -= cam.WorldToScreenPoint (transform.position);
-        angle = Vector3.Angle(mousePos, Vector3.up);
-        */
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         anglePos = Input.mousePosition;
@@ -60,8 +49,7 @@ public class ArmController : MonoBehaviour {
         {
             GameObject clone;
             clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
-            clone.transform.LookAt(mousePos);
-            //clone.GetComponent<Rigidbody2D>().AddForce(new Vector2(stupid.x, stupid.y) * fireballSpeed, 0);
+            clone.transform.LookAt(anglePos);
             clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
         }
 
@@ -69,7 +57,7 @@ public class ArmController : MonoBehaviour {
         {
             GameObject clone;
             clone = (GameObject)Instantiate(projectile2, transform.position, transform.rotation);
-            clone.transform.LookAt(mousePos);
+            clone.transform.LookAt(anglePos);
             clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
         }
     }

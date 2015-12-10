@@ -441,7 +441,7 @@ MonoBehaviour:
   - {fileID: 101492, guid: 7bdd09cef1189a14ea67b6922081a4cc, type: 2}
   - {fileID: 132886, guid: 8cc97a5e7eb3cd240bac7285f7f5c67f, type: 2}
   - {fileID: 167822, guid: c7f0d2595a4d1ae4995f2990b0e3cf6b, type: 2}
-  nTrees: 100
+  nTrees: 500
   width: 100
   depth: .699999988
 --- !u!1 &948033419
