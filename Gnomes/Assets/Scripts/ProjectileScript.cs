@@ -5,6 +5,7 @@ public class ProjectileScript : MonoBehaviour {
     public int timer;
 	// Use this for initialization
 	void Start () {
+
         timer = 100;
 	}
 	
@@ -20,8 +21,7 @@ public class ProjectileScript : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision)
     {
 		if (collision.tag != "Player" && collision.tag != "Fireball" && collision.tag != "NoCollide") {
-			Debug.Log(collision);
-			Destroy (this.gameObject);
+				Destroy (this.gameObject);
 		}
 
 		//if (collision.tag == "Mob")
