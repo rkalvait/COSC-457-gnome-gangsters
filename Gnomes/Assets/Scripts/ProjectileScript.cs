@@ -24,7 +24,7 @@ public class ProjectileScript : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 
-		if (collision.tag == "Mob")
-			Destroy (collision.gameObject);
+		//if (collision.tag == "Mob")
+			//Destroy (collision.gameObject);
     }
 }
