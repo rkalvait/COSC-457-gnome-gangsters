@@ -56,13 +56,18 @@ public class ImpossibruAI : MonoBehaviour {
 		if ( collided_with.tag == "Player" ) {
 			seen = true;
 		}
-		if (collided_with.tag == "PProj") {
-			
+		if (collided_with.tag == "Fireball") {
+			explode();
 		}
 	}
 
 	void setSeen()
 	{
 		seen = true;
+	}
+
+	void explode()
+	{
+		Destroy (this.gameObject);
 	}
 }

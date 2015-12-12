@@ -34,7 +34,7 @@ public class PlayerHP : MonoBehaviour {
 			currentHP -= 10;
 		}
 		if (collision.tag == "Impossibru") {
-			currentHP -= 15;
+			currentHP -= 5;
 		}
 		if (currentHP <= 0) {
 			Debug.Log("You are dead!");
