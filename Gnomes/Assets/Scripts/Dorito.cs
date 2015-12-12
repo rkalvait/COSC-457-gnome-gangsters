@@ -31,7 +31,7 @@ public class Dorito : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.tag != "Impossibru" && collision.tag != "NoCollide" && collision.tag != "Mob"
-		    && collision.tag != "Fireball" && collision.tag != "Dorito") {
+		    && collision.tag != "Fireball" && collision.tag != "Dorito" && collision.tag != "Particle") {
 			Destroy(this.gameObject);
 		}
 		
