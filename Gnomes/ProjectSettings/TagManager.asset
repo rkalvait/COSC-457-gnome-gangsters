@@ -12,6 +12,7 @@ TagManager:
   - Block_Maker
   - NoCollide
   - Impossibru
+  - Dorito
   layers:
   - Default
   - TransparentFX

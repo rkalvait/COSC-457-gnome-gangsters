@@ -136,6 +136,10 @@ Prefab:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11449088, guid: 3b37c2283db9fad419a9ce7e1cde49e6, type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 162300, guid: b7a30d50aa73ad146a390c518157527c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b37c2283db9fad419a9ce7e1cde49e6, type: 2}
   m_IsPrefabParent: 0
@@ -455,7 +459,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!1001 &1525947902
 Prefab:
   m_ObjectHideFlags: 0

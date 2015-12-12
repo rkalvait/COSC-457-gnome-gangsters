@@ -21,10 +21,15 @@ public class ProjectileScript : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision)
     {
 		if (collision.tag != "Player" && collision.tag != "Fireball" && collision.tag != "NoCollide") {
-				Destroy (this.gameObject);
+			explode ();
 		}
 
 		//if (collision.tag == "Mob")
 			//Destroy (collision.gameObject);
     }
+
+	void explode()
+	{
+		Destroy (this.gameObject);
+	}
 }

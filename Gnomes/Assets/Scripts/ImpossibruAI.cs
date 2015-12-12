@@ -6,6 +6,7 @@ public class ImpossibruAI : MonoBehaviour {
 	public bool seen = false;
 	Vector3 player_pos;
 	Vector3 position;
+	public GameObject projectile;
 	public float speed = 0.1f;
 	private Rigidbody2D rigid;// = GetComponent<Rigidbody2D>();
 	public static CircleCollider2D cc;
@@ -57,7 +58,7 @@ public class ImpossibruAI : MonoBehaviour {
 			seen = true;
 		}
 		if (collided_with.tag == "Fireball") {
-			explode();
+			Destroy (transform.parent.gameObject);
 		}
 	}
 
@@ -66,8 +67,22 @@ public class ImpossibruAI : MonoBehaviour {
 		seen = true;
 	}
 
-	void explode()
+	void OnDestroy()
 	{
-		Destroy (this.gameObject);
+		//float randomAngle;
+		Debug.Log ("Is anyone there?");
+		float randomX;
+		float randomY;
+		GameObject clone;
+		for(int i = 0; i < 4; i++)
+		{
+			//randomAngle = Random.value * 360 * Mathf.Rad2Deg;
+			randomX = transform.position.x + Random.value*2-1;
+			randomY = transform.position.y + Random.value*2-1;
+			clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
+			clone.transform.LookAt(new Vector3(randomX, randomY, 1f));
+			clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * 15.0f;
+		}
+
 	}
 }

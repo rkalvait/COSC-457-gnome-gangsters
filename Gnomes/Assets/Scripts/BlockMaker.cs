@@ -6,7 +6,7 @@ public class BlockMaker : MonoBehaviour {
 	public int timer;
 	// Use this for initialization
 	void Start () {
-		timer = 100;
+		timer = 300;
 	}
 	
 	// Update is called once per frame

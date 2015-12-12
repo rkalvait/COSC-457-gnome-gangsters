@@ -33,6 +33,9 @@ public class PlayerHP : MonoBehaviour {
 		if (collision.tag == "Bullet") {
 			currentHP -= 10;
 		}
+		if (collision.tag == "Dorito") {
+			currentHP -= 10;
+		}
 		if (collision.tag == "Impossibru") {
 			currentHP -= 5;
 		}
