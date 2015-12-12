@@ -22,6 +22,7 @@ public class ArmController : MonoBehaviour {
         
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+		mousePos = new Vector3 (mousePos.x, mousePos.y, 0);
         anglePos = Input.mousePosition;
         anglePos -= cam.WorldToScreenPoint(transform.position);
         angle = Vector3.Angle(anglePos, Vector3.up);
@@ -47,17 +48,19 @@ public class ArmController : MonoBehaviour {
         //Fire projectile
         if (Input.GetButtonDown("Fire1"))
         {
+
             GameObject clone;
             clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
-            clone.transform.LookAt(anglePos);
-            clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
+            clone.transform.LookAt(mousePos);
+			clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
+
         }
 
         if (Input.GetButtonDown("Fire2"))
         {
             GameObject clone;
             clone = (GameObject)Instantiate(projectile2, transform.position, transform.rotation);
-            clone.transform.LookAt(anglePos);
+            clone.transform.LookAt(mousePos);
             clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
         }
     }
