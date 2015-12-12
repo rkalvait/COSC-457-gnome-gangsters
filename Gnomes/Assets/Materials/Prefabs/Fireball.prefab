@@ -104,6 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 100
+  projectile1: {fileID: 144090, guid: 5fe709bbafcd2f743a6d2d19cbf4435c, type: 2}
+  projectile2: {fileID: 171512, guid: 564ab4e5c2b250f48bfc964111b09a29, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -163,6 +165,14 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: .300000012
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: projectile1
+      value: 
+      objectReference: {fileID: 144090, guid: 5fe709bbafcd2f743a6d2d19cbf4435c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: projectile2
+      value: 
+      objectReference: {fileID: 171512, guid: 564ab4e5c2b250f48bfc964111b09a29, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 191754}

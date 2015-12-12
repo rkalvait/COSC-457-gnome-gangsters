@@ -58,6 +58,7 @@ public class ImpossibruAI : MonoBehaviour {
 			seen = true;
 		}
 		if (collided_with.tag == "Fireball") {
+			onDestroy ();
 			Destroy (transform.parent.gameObject);
 		}
 	}
@@ -67,21 +68,21 @@ public class ImpossibruAI : MonoBehaviour {
 		seen = true;
 	}
 
-	void OnDestroy()
+	void onDestroy()
 	{
 		//float randomAngle;
-		Debug.Log ("Is anyone there?");
 		float randomX;
 		float randomY;
-		GameObject clone;
+		GameObject clone1;
 		for(int i = 0; i < 4; i++)
 		{
 			//randomAngle = Random.value * 360 * Mathf.Rad2Deg;
 			randomX = transform.position.x + Random.value*2-1;
 			randomY = transform.position.y + Random.value*2-1;
-			clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
-			clone.transform.LookAt(new Vector3(randomX, randomY, 1f));
-			clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * 15.0f;
+			clone1 = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
+			clone1.transform.LookAt(new Vector3(randomX, randomY, 1f));
+			clone1.GetComponent<Rigidbody2D>().velocity = clone1.transform.forward * 15.0f;
+			clone1.transform.position = new Vector3(clone1.transform.position.x, clone1.transform.position.y, 0.0f);
 		}
 
 	}

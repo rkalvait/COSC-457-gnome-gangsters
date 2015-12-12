@@ -13,6 +13,7 @@ TagManager:
   - NoCollide
   - Impossibru
   - Dorito
+  - Particle
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Arm
   - PProj
   - FieldOfView
-  - 
+  - Particle
   - 
   - 
   - 
