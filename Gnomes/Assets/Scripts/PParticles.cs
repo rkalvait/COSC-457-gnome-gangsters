@@ -9,8 +9,8 @@ public class PParticles : MonoBehaviour {
 	int minDur;
 	void Start() {
 		random = Random.value*2;
-		duration = 200;
-		minDur = 50;
+		duration = 50;
+		minDur = 5;
 	}
 	
 	// Update is called once per frame

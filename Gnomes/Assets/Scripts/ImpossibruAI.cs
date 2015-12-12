@@ -58,7 +58,7 @@ public class ImpossibruAI : MonoBehaviour {
 			seen = true;
 		}
 		if (collided_with.tag == "Fireball") {
-			//onDestroy ();
+			onDestroy ();
 			Destroy (transform.parent.gameObject);
 		}
 	}
@@ -68,7 +68,7 @@ public class ImpossibruAI : MonoBehaviour {
 		seen = true;
 	}
 
-	void OnDestroy()
+	void onDestroy()
 	{
 		//float randomAngle;
 		float randomX;
