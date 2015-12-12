@@ -30,16 +30,20 @@ public class PlayerHP : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		//Debug.Log ("should this be 2D");
-		//GameObject collided_with = collision.gameObject;
 		if (collision.tag == "Bullet") {
 			currentHP -= 10;
 		}
 		if (collision.tag == "Impossibru") {
-			Debug.Log("You've been hit");
 			currentHP -= 15;
 		}
-		//Debug.Log ("herpaderp");
-		//Destroy(this.gameObject);
+		if (currentHP <= 0) {
+			Debug.Log("You are dead!");
+			playerDeath();
+		}
+	}
+
+	void playerDeath()
+	{
+
 	}
 }

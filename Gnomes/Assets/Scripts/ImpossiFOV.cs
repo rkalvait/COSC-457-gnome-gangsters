@@ -22,8 +22,5 @@ public class ImpossiFOV : MonoBehaviour {
 			cc.enabled = false;
 			Debug.Log("Working");
 		}
-		if (collided_with.tag == "PProj") {
-			
-		}
 	}
 }
