@@ -9,7 +9,7 @@ public class ArmController : MonoBehaviour {
     public float distFromCamera = 10.0f;
     public GameObject projectile;
     public GameObject projectile2;
-    float fireballSpeed = 25.0f;
+    float fireballSpeed = 50.0f;
     Vector3 mousePos;
     Vector3 anglePos;
 	// Use this for initialization

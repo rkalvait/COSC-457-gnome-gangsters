@@ -55,9 +55,6 @@ public class ImpossibruAI : MonoBehaviour {
 		GameObject collided_with = other.gameObject;
 		if ( collided_with.tag == "Player" ) {
 			seen = true;
-			cc = GetComponent<CircleCollider2D> ();
-			cc.enabled = false;
-			Debug.Log("Working");
 		}
 		if (collided_with.tag == "PProj") {
 			

@@ -11,6 +11,7 @@ TagManager:
   - bounds
   - Block_Maker
   - NoCollide
+  - Impossibru
   layers:
   - Default
   - TransparentFX
