@@ -125,8 +125,8 @@ public class EnemyAI : MonoBehaviour {
 			BoxCollider2D bc = GetComponent<BoxCollider2D> ();
 			bc.enabled = false;
 		}
-		if (collided_with.tag == "PProj") {
-
+		if (collided_with.tag == "Fireball") {
+			Destroy (this.gameObject);
 		}
 	}
 
