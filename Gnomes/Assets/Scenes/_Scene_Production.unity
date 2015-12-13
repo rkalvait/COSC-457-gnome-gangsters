@@ -752,6 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DogePrefab: {fileID: 137248, guid: dcc4e1607c1c1cb4f95acdab2efa1dcb, type: 2}
+  Impossibru: {fileID: 147712, guid: 3b37c2283db9fad419a9ce7e1cde49e6, type: 2}
   HPBar: {fileID: 1414699281}
   HPBar_Parent: {fileID: 1329298462}
   openmouth: {fileID: 21300002, guid: 1f6d301a0f2e42c4a81e5dfe52717237, type: 3}
@@ -759,6 +760,7 @@ MonoBehaviour:
   imagined: {fileID: 112054969}
   cena: {fileID: 1263180483}
   player: {fileID: 1995941714}
+  FireDelay: 1
   ___________________: 0
   HP: 0
 --- !u!1 &1263180483
