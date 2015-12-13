@@ -32,13 +32,15 @@ public class PlayerHP : MonoBehaviour {
 	{
 		if (collision.tag == "Bullet") {
 			currentHP -= 10;
-		}
-		if (collision.tag == "Dorito") {
+		} else if (collision.tag == "Dorito") {
 			currentHP -= 10;
-		}
-		if (collision.tag == "Impossibru") {
+		} else if (collision.tag == "Impossibru") {
 			currentHP -= 5;
+		} else if (collision.tag == "Doge") {
+			currentHP -= 7;
 		}
+
+
 		if (currentHP <= 0) {
 			Debug.Log("You are dead!");
 			playerDeath();
