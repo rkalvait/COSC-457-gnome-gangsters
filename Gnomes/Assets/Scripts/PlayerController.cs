@@ -60,6 +60,9 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+		if (Input.GetKey (KeyCode.S)) {
+			rb.AddForce(new Vector2(0, -25));
+		}
 
     }
 
