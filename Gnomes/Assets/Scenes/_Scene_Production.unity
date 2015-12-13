@@ -440,7 +440,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 13.5799999
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -640,7 +640,7 @@ GameObject:
   - 114: {fileID: 1222435221}
   m_Layer: 0
   m_Name: Da_Boss
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -753,6 +753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DogePrefab: {fileID: 137248, guid: dcc4e1607c1c1cb4f95acdab2efa1dcb, type: 2}
   Impossibru: {fileID: 147712, guid: 3b37c2283db9fad419a9ce7e1cde49e6, type: 2}
+  DoritoPrefab: {fileID: 162300, guid: b7a30d50aa73ad146a390c518157527c, type: 2}
   HPBar: {fileID: 1414699281}
   HPBar_Parent: {fileID: 1329298462}
   openmouth: {fileID: 21300002, guid: 1f6d301a0f2e42c4a81e5dfe52717237, type: 3}
@@ -1043,6 +1044,14 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 691445148}
+    - target: {fileID: 486168, guid: bd6115c6cd0a6754eba28dcff12ff102, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -23.1000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 486168, guid: bd6115c6cd0a6754eba28dcff12ff102, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.49000001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd6115c6cd0a6754eba28dcff12ff102, type: 2}
   m_IsPrefabParent: 0
