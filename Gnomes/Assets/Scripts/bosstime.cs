@@ -47,17 +47,22 @@ public class bosstime : MonoBehaviour {
 
 	public void DoritoBeam() {
 		for (int i=0; i<10; i++) {
-			Invoke ("OneDorito", 0.1f *i);
+			Invoke ("OneDorito", 1f *i);
 		}
 
-		Invoke("DoritoBeam", 7);
+		Invoke("DoritoBeam", 20);
 	}
 
 	public void OneDorito() {
 		GameObject dorito = Instantiate(DoritoPrefab);
-		dorito.transform.position = this.transform.position + new Vector3(-1.21f, 1.76f, 4f);
+		dorito.transform.position = this.transform.position + new Vector3(-3.21f, 1.76f, 4f);
 		dorito.GetComponent<Rigidbody2D>().isKinematic = true;
-		dorito.GetComponent<Rigidbody2D>().AddForce(Vector3.MoveTowards(dorito.transform.position, player.transform.position, 2));
+		dorito.transform.localScale = new Vector3(1.5f, 1.5f, 1f);
+		Vector3 dpos = dorito.transform.position;
+		Vector3 dorito2d = new Vector3(dpos.x, dpos.y, 0);
+		Vector3 ppos = player.transform.position;
+		Vector3 player2d = new Vector3(ppos.x, ppos.y, 0);
+		dorito.GetComponent<Rigidbody2D>().velocity = (Vector2) Vector3.Normalize(ppos - dpos) * 10;
 	}
 
 	public void CloseMouth() {
