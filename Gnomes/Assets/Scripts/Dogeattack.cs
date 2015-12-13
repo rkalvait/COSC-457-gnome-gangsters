@@ -4,8 +4,14 @@ using System.Collections;
 public class Dogeattack : MonoBehaviour {
 
 	public GameObject player;
-	public int speed;
-	
+	public float speed;
+
+	int HP;
+
+	void Start() {
+		HP = 5;
+	}
+
 	// Update is called once per frame
 	void Update () { 
 		Vector3 direction3D = player.transform.position - transform.position;
@@ -23,6 +29,17 @@ public class Dogeattack : MonoBehaviour {
 			transform.localScale = new Vector3(1, 1, 1);
 		}
 
-		GetComponent<Rigidbody2D>().AddRelativeForce(speed * direction);
+		transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed);
+	}
+	
+	void OnTriggerEnter2D(Collider2D collision) {
+		if (collision.tag == "Player") {
+			Destroy (gameObject);
+		} else if (collision.tag == "Fireball") {
+			HP--;
+			if (HP <= 0) {
+				Destroy (gameObject);
+			}
+		}
 	}
 }
