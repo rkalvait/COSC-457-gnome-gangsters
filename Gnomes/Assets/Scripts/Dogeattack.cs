@@ -9,7 +9,7 @@ public class Dogeattack : MonoBehaviour {
 	int HP;
 
 	void Start() {
-		HP = 5;
+		HP = 3;
 	}
 
 	// Update is called once per frame
@@ -40,6 +40,9 @@ public class Dogeattack : MonoBehaviour {
 			if (HP <= 0) {
 				Destroy (gameObject);
 			}
+		} else if (collision.tag == "Block_Maker") {
+			Destroy (collision.gameObject);
+			Destroy(gameObject);
 		}
 	}
 }
