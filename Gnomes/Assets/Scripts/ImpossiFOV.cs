@@ -20,7 +20,7 @@ public class ImpossiFOV : MonoBehaviour {
 			impossibru.GetComponent<ImpossibruAI>().seen = true;
 			CircleCollider2D cc = GetComponent<CircleCollider2D> ();
 			cc.enabled = false;
-			Debug.Log("Working");
+			//Debug.Log("Working");
 		}
 	}
 }
