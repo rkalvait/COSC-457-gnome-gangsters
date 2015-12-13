@@ -8,6 +8,8 @@ public class PlayerHP : MonoBehaviour {
 	Color FullHP = Color.green;
 	Color NoHP = Color.red;
 	public Image Fill;
+	public Image ScreenFade;
+	public Text text;
 	Slider healthSlider;
 	// Use this for initialization
 	void Start () {
@@ -47,6 +49,7 @@ public class PlayerHP : MonoBehaviour {
 
 	void playerDeath()
 	{
-
+		text.color = new Color (1, 0, 0, 1);
+		ScreenFade.color = new Color (0, 0, 1, 1);
 	}
 }
