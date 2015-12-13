@@ -77,10 +77,10 @@ public class PlayerController : MonoBehaviour
 			float diff = collision.transform.position.x - transform.position.x;
 			if (diff < 0) {
 				Debug.Log ("if");
-				rb.AddForce (Vector2.right * 10000);
+				rb.AddForce (Vector2.right * 3500);
 			} else {
 				Debug.Log ("else");
-				rb.AddForce (Vector2.left * 10000);
+				rb.AddForce (Vector2.left * 3500);
 			}
 		} else {
 		}
