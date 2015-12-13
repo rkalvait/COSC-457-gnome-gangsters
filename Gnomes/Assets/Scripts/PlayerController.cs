@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+
             if (movex > 0)
             {
                 movex -= 0.015f;
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
             {
                 movex += 0.015f;
             }
+            
             if (!isJumping)
             {
                 movex = 0f;
@@ -53,7 +55,7 @@ public class PlayerController : MonoBehaviour
         //jump if not already in air
         if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)
         {
-            rb.AddForce(new Vector2(0, 400));
+            rb.velocity = (new Vector2(0, 10));
         }
         //make sure player does not get stuck to ground
         if (rb.velocity.y <= 0.01 && rb.velocity.y >= -0.01)
@@ -63,10 +65,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
+
     void FixedUpdate()
     {
         rb.velocity = new Vector2(movex * Speed, rb.velocity.y);
     }
+
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
