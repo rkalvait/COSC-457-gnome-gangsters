@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -23.1000004, y: -.49000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407082}
@@ -291,6 +291,8 @@ MonoBehaviour:
   startingHP: 100
   currentHP: 0
   Fill: {fileID: 0}
+  ScreenFade: {fileID: 0}
+  text: {fileID: 0}
 --- !u!212 &21265056
 SpriteRenderer:
   m_ObjectHideFlags: 1
