@@ -10,7 +10,7 @@ public class Dorito : MonoBehaviour {
 
 	void Start() {
 		random = Random.value*2;
-		duration = 1000;
+		duration = 100;
 	}
 
 	// Update is called once per frame
