@@ -48,7 +48,7 @@ public class ProjectileScript : MonoBehaviour {
 
 			clone1.transform.LookAt(new Vector3(randomX, randomY, 0f));
 			clone1.GetComponent<Rigidbody2D>().velocity = clone1.transform.forward * 15.0f;
-			clone1.transform.position = new Vector3(clone1.transform.position.x, clone1.transform.position.y, 0.0f);
+			//clone1.transform.position = new Vector3(clone1.transform.position.x, clone1.transform.position.y, 0.0f);
 		}
 
 	}
