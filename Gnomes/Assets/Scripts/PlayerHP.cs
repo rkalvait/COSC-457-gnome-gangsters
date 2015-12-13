@@ -11,10 +11,12 @@ public class PlayerHP : MonoBehaviour {
 	public Image ScreenFade;
 	public Text text;
 	Slider healthSlider;
+	bool dead;
 	// Use this for initialization
 	void Start () {
 		currentHP = startingHP;
 		healthSlider = GameObject.Find ("HealthSlider").GetComponent<Slider> ();
+		dead = false;
 		//Fill = GameObject.Find ("HealthSlider").GetComponent<Slider> ().;
 	}
 	
@@ -27,6 +29,12 @@ public class PlayerHP : MonoBehaviour {
 		Fill.color = Color.Lerp (NoHP, FullHP, (float)currentHP / startingHP);
 		if (currentHP == 0) {
 			Fill.color = Color.black;
+		}
+		if (dead) {
+			if(Input.GetButtonDown("Fire1"))
+			{
+				Application.LoadLevel("_Scene_ManScreen");
+			}
 		}
 	}
 
@@ -53,5 +61,7 @@ public class PlayerHP : MonoBehaviour {
 	{
 		text.color = new Color (1, 0, 0, 1);
 		ScreenFade.color = new Color (0, 0, 1, 1);
+		dead = true;
+
 	}
 }
