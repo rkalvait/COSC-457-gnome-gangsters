@@ -33,7 +33,12 @@ public class Dorito : MonoBehaviour {
 		if (collision.tag == "Player" || collision.tag == "Untagged") {
 			Destroy(this.gameObject);
 		}
-		
+
+		if (collision.tag == "Block_Maker") {
+			Destroy (collision.gameObject);
+			Destroy(this.gameObject);
+		}
+
 		//if (collision.tag == "Mob")
 		//Destroy (collision.gameObject);
 	}
