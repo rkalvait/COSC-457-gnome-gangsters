@@ -5,7 +5,7 @@ public class Feet : MonoBehaviour {
 
 	public GameObject player;
 
-	public void OnCollisionEnter2D(Collision2D coll) {
+	public void OnCollisionStay2D(Collision2D coll) {
 		player.GetComponent<PlayerController> ().isJumping = false;
 	}
 

@@ -42,12 +42,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10);
+			isJumping = true;
         }
         //make sure player does not get stuck to ground
         if (rb.velocity.y <= 0.01 && rb.velocity.y >= -0.01) {
-			isJumping = false;
+			//isJumping = false;
 		} else {
-			isJumping = true;
+			//isJumping = true;
 		}
 		if (Input.GetKey (KeyCode.S)) {
 			rb.AddForce(new Vector2(0, -25));
