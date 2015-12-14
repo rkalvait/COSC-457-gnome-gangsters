@@ -46,7 +46,7 @@ public class bosstime : MonoBehaviour {
 	}
 
 	public void DoritoBeam() {
-		for (int i=0; i<30; i++) {
+		for (int i=0; i<10; i++) {
 			Invoke ("OneDorito", 0.1f *i);
 		}
 
@@ -62,7 +62,7 @@ public class bosstime : MonoBehaviour {
 		Vector3 dorito2d = new Vector3(dpos.x, dpos.y, 0);
 		Vector3 ppos = player.transform.position;
 		Vector3 player2d = new Vector3(ppos.x, ppos.y, 0);
-		dorito.GetComponent<Rigidbody2D>().velocity = (Vector2) Vector3.Normalize(ppos - dpos) * 30;
+		dorito.GetComponent<Rigidbody2D>().velocity = (Vector2) Vector3.Normalize(ppos - dpos) * 10;
 	}
 
 	public void CloseMouth() {

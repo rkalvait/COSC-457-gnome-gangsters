@@ -29,14 +29,10 @@ public class PlayerController : MonoBehaviour
         //A to move left
         if (Input.GetKey (KeyCode.A)) {
 			rb.velocity = new Vector2 (-Speed, rb.velocity.y);
-			//rb.AddForce(new Vector2(-Speed, 0));
 			//D to move right
 		} else if (Input.GetKey (KeyCode.D)) {
 			rb.velocity = new Vector2 (Speed, rb.velocity.y);
-			//rb.AddForce(new Vector2(Speed, 0));
-		} else  if (isJumping) {
-			//rb.velocity = new Vector2 (0, rb.velocity.y);
-		}
+		} 
 
         //jump if not already in air
         if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)
@@ -66,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		//Debug.Log ("should this be 2D");
+
 		//GameObject collided_with = collision.gameObject;
 		if (collision.tag == "Bullet") {
 			Debug.Log ("is bullet");
@@ -80,7 +76,5 @@ public class PlayerController : MonoBehaviour
 			}
 		} else {
 		}
-			//Debug.Log ("herpaderp");
-		//Destroy(this.gameObject);
 	}
 }

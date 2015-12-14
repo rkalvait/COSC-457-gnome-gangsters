@@ -20,10 +20,11 @@ public class ParallaxTrees : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		foreach (GameObject tree in objects) {
+
 			float delta = transform.position.x - old_pos.x;
 			float percent = (tree.transform.position.z - 10) / 10f;
 			float x = tree.transform.position.x + (delta * percent * depth);
-			if (transform.position.x - x > width/2f) {
+			if (x < (243-width) && transform.position.x - x > width/2f) {
 				x += width;
 			} else if (transform.position.x - x < -width/2f	) {
 				x -= width;
@@ -33,7 +34,9 @@ public class ParallaxTrees : MonoBehaviour {
 
 			tree.transform.position = new Vector3(x,y,z);
 		}
-		blackbar.transform.position = new Vector3 (transform.position.x, blackbar.transform.position.y, blackbar.transform.position.z);
+		if (transform.position.x < 243 - width) {
+			blackbar.transform.position = new Vector3 (transform.position.x, blackbar.transform.position.y, blackbar.transform.position.z);
+		}
 		old_pos = transform.position;
 	}
 
