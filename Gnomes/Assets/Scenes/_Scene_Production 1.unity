@@ -85,6 +85,48 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &272696239
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 449806, guid: 9d7933b1eada7bc44a332dad17fec13c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449806, guid: 9d7933b1eada7bc44a332dad17fec13c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449806, guid: 9d7933b1eada7bc44a332dad17fec13c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449806, guid: 9d7933b1eada7bc44a332dad17fec13c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449806, guid: 9d7933b1eada7bc44a332dad17fec13c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449806, guid: 9d7933b1eada7bc44a332dad17fec13c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449806, guid: 9d7933b1eada7bc44a332dad17fec13c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 449806, guid: 9d7933b1eada7bc44a332dad17fec13c, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9d7933b1eada7bc44a332dad17fec13c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &630803462 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11483998, guid: 745b5f52846911940ac78f6ca9b25ba5,
@@ -164,7 +206,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &691445144
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +324,7 @@ MonoBehaviour:
   - {fileID: 101492, guid: 7bdd09cef1189a14ea67b6922081a4cc, type: 2}
   - {fileID: 132886, guid: 8cc97a5e7eb3cd240bac7285f7f5c67f, type: 2}
   - {fileID: 167822, guid: c7f0d2595a4d1ae4995f2990b0e3cf6b, type: 2}
+  blackbar: {fileID: 0}
   nTrees: 500
   width: 100
   depth: 0

@@ -7,9 +7,8 @@ public enum WeaponType {Pistol, TommyGun, Brass}
 
 public class EnemyAI : MonoBehaviour {
 
-	[HideInInspector] public bool facing_right = true;
+	public bool facing_right = true;
 	[HideInInspector] public bool jump = true;
-
 	public float health = 100f;
 
 	public float move_force = 50f;
@@ -33,9 +32,13 @@ public class EnemyAI : MonoBehaviour {
 	//private float movey = 0f;
 	
 	// Use this for initialization
-	void Awake () {
+	void Start () {
 		//anim = GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D>();
+        if (facing_right)
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        if (!facing_right)
+            transform.eulerAngles = new Vector3(0, 180, 0);
 	}
 	
 	// Update is called once per frame
@@ -120,13 +123,14 @@ public class EnemyAI : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		//Debug.Log("enter");
 		GameObject collided_with = other.gameObject;
-		if ( collided_with.tag == "Player" ) {
+        /*I		if ( collided_with.tag == "Player" ) {
 			seen = true;
 			BoxCollider2D bc = GetComponent<BoxCollider2D> ();
 			bc.enabled = false;
 		}
+         * */
 		if (collided_with.tag == "Fireball") {
-			Destroy (this.gameObject);
+			Destroy (transform.parent.gameObject);
 		}
 	}
 
