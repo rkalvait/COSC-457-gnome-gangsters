@@ -4,6 +4,7 @@ using System.Collections;
 public class ParallaxTrees : MonoBehaviour {
 
 	public GameObject[] trees;
+	public GameObject blackbar;
 	public int nTrees;
 	public float width;
 	public float depth;
@@ -22,11 +23,17 @@ public class ParallaxTrees : MonoBehaviour {
 			float delta = transform.position.x - old_pos.x;
 			float percent = (tree.transform.position.z - 10) / 10f;
 			float x = tree.transform.position.x + (delta * percent * depth);
+			if (transform.position.x - x > width/2f) {
+				x += width;
+			} else if (transform.position.x - x < -width/2f	) {
+				x -= width;
+			}
 			float y = tree.transform.position.y;
 			float z = tree.transform.position.z;
 
 			tree.transform.position = new Vector3(x,y,z);
 		}
+		blackbar.transform.position = new Vector3 (transform.position.x, blackbar.transform.position.y, blackbar.transform.position.z);
 		old_pos = transform.position;
 	}
 
@@ -35,7 +42,7 @@ public class ParallaxTrees : MonoBehaviour {
 
 		for (int i=0; i<ret.Length; i++) {
 			float z = Random.Range(10,20);
-			float x = Random.Range(-width/2, width/2) * (1 - (depth * (z-10)/10f));
+			float x = Random.Range(-width/2, width/2);// * (1 - (depth * (z-10)/10f));
 			GameObject tree = Instantiate(trees[(int)Mathf.Floor( Random.Range (0f,-0.001f + trees.Length))]);
 			float y = tree.transform.position.y;
 

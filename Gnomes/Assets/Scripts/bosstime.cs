@@ -46,8 +46,8 @@ public class bosstime : MonoBehaviour {
 	}
 
 	public void DoritoBeam() {
-		for (int i=0; i<10; i++) {
-			Invoke ("OneDorito", 1f *i);
+		for (int i=0; i<30; i++) {
+			Invoke ("OneDorito", 0.1f *i);
 		}
 
 		Invoke("DoritoBeam", 20);
@@ -57,12 +57,12 @@ public class bosstime : MonoBehaviour {
 		GameObject dorito = Instantiate(DoritoPrefab);
 		dorito.transform.position = this.transform.position + new Vector3(-3.21f, 1.76f, 4f);
 		dorito.GetComponent<Rigidbody2D>().isKinematic = true;
-		dorito.transform.localScale = new Vector3(1.5f, 1.5f, 1f);
+		dorito.transform.localScale = new Vector3(1.0f, 1.0f, 1f);
 		Vector3 dpos = dorito.transform.position;
 		Vector3 dorito2d = new Vector3(dpos.x, dpos.y, 0);
 		Vector3 ppos = player.transform.position;
 		Vector3 player2d = new Vector3(ppos.x, ppos.y, 0);
-		dorito.GetComponent<Rigidbody2D>().velocity = (Vector2) Vector3.Normalize(ppos - dpos) * 10;
+		dorito.GetComponent<Rigidbody2D>().velocity = (Vector2) Vector3.Normalize(ppos - dpos) * 30;
 	}
 
 	public void CloseMouth() {
@@ -72,7 +72,7 @@ public class bosstime : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collision) {
 		if (!active) return;
 		if (collision.tag == "Fireball") {
-			HP -= 1;
+			HP -= 20;
 			if (HP <= 0) {
 
 				Destroy(gameObject);

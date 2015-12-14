@@ -13,6 +13,7 @@ public class ImpossibruAI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rigid = GetComponent<Rigidbody2D>();
+		transform.position = new Vector3(transform.position.x, transform.position.y, 0.0f);
 		//Debug.Log ("Pancake");
 	}
 	
@@ -77,8 +78,8 @@ public class ImpossibruAI : MonoBehaviour {
 		for(int i = 0; i < 4; i++)
 		{
 			//randomAngle = Random.value * 360 * Mathf.Rad2Deg;
-			randomX = transform.position.x + Random.value*2-1;
-			randomY = transform.position.y + Random.value*2-1;
+			randomX = this.transform.position.x + Random.value*2-1;
+			randomY = this.transform.position.y + Random.value*2-1;
 			clone1 = (GameObject) Instantiate(projectile, transform.position, Quaternion.Euler(0,0,0));
 			clone1.transform.LookAt(new Vector3(randomX, randomY, 0f));
 			clone1.GetComponent<Rigidbody2D>().velocity = clone1.transform.forward * 15.0f;
