@@ -20,7 +20,8 @@ public class BlockMaker : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.tag != "player" && collision.tag != "Fireball" && collision.tag != "NoCollide" && collision.tag != "Block_Maker" && collision.tag != "Particle") 
+		//Debug.Log (collision.tag);
+		if (collision.tag != "Player" && collision.tag != "Fireball" && collision.tag != "NoCollide" && collision.tag != "Block_Maker" && collision.tag != "Particle") 
 		{
 			DestroyAllObjects();
 			GameObject clone;
