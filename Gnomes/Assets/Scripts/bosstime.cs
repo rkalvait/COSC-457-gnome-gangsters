@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class bosstime : MonoBehaviour {
-
+	
+	public AudioClip hitmarker;
 	public GameObject DogePrefab;
 	public GameObject Impossibru;
 	public GameObject DoritoPrefab;
@@ -18,9 +19,11 @@ public class bosstime : MonoBehaviour {
 	bool fireType = false;
 	bool active = false;
 	public int HP;
+	AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
+		audio = GetComponent<AudioSource> ();
 		HP = 100;
 	}
 
@@ -72,7 +75,8 @@ public class bosstime : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collision) {
 		if (!active) return;
 		if (collision.tag == "Fireball") {
-			HP -= 20;
+			this.audio.PlayOneShot(hitmarker);
+			HP -= 1;
 			if (HP <= 0) {
 
 				Destroy(gameObject);
