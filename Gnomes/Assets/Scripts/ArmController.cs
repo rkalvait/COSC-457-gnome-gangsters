@@ -5,6 +5,7 @@ public class ArmController : MonoBehaviour {
 
     public GameObject player;
 	public Camera cam;
+	public AudioClip airhorn;
     float angleX, angleY, angle;
     public float distFromCamera = 10.0f;
     public GameObject projectile;
@@ -12,9 +13,10 @@ public class ArmController : MonoBehaviour {
     float fireballSpeed = 50.0f;
     Vector3 mousePos;
     Vector3 anglePos;
+	AudioSource audio;
 	// Use this for initialization
 	void Start () {
-	
+		this.audio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -48,7 +50,7 @@ public class ArmController : MonoBehaviour {
         //Fire projectile
         if (Input.GetButtonDown("Fire1"))
         {
-
+			this.audio.PlayOneShot(airhorn);
             GameObject clone;
             clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
             clone.transform.LookAt(mousePos);

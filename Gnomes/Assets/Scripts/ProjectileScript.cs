@@ -5,9 +5,11 @@ public class ProjectileScript : MonoBehaviour {
     public int timer;
 	public GameObject projectile1;
 	public GameObject projectile2;
+	public AudioClip hitmarker;
+	AudioSource audio;
 	// Use this for initialization
 	void Start () {
-
+		audio = GetComponent<AudioSource> ();
         timer = 100;
 	}
 	
@@ -23,6 +25,9 @@ public class ProjectileScript : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision)
     {
 		if (collision.tag != "Player" && collision.tag != "Fireball" && collision.tag != "NoCollide" && collision.tag != "Particle") {
+
+			
+			this.audio.PlayOneShot(hitmarker);
 			onDestroy();
 			Destroy (this.gameObject);
 		}
