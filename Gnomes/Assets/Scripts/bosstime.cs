@@ -84,7 +84,13 @@ public class bosstime : MonoBehaviour {
 
 	void OnDestroy() {
 		Debug.Log("DED");
-		imagined.GetComponent<AudioSource>().UnPause();
+		if (!ShreckMusic.shrekstarted) {
+			imagined.GetComponent<AudioSource> ().UnPause ();
+			PlayerController.CurrentMusic = imagined;
+		} else {
+			ShreckMusic.getShrecked.GetComponent<AudioSource> ().UnPause ();
+			PlayerController.CurrentMusic = ShreckMusic.getShrecked;
+		}
 		cena.GetComponent<AudioSource>().Stop ();
 	}
 }

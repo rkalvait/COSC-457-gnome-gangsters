@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
 	static public PlayerController player;
+	static public GameObject CurrentMusic;
 
     public float Speed = 10f;
 	public bool ____________________________;
@@ -40,18 +41,27 @@ public class PlayerController : MonoBehaviour
         //jump if not already in air
         if (Input.GetKeyDown(KeyCode.Space) && isJumping == false)
         {
-            rb.velocity = rb.velocity + new Vector2(0, 10);
+            rb.velocity = new Vector2(rb.velocity.x, 10);
         }
         //make sure player does not get stuck to ground
-        if (rb.velocity.y <= 0.01 && rb.velocity.y >= -0.01)
-        {
-            isJumping = false;
-        }
+        if (rb.velocity.y <= 0.01 && rb.velocity.y >= -0.01) {
+			isJumping = false;
+		} else {
+			isJumping = true;
+		}
 		if (Input.GetKey (KeyCode.S)) {
 			rb.AddForce(new Vector2(0, -25));
 		}
 
     }
+
+	void FixedUpdate() {
+		if (rb.velocity.x > 0) {
+			rb.velocity = new Vector2 (rb.velocity.x-1, rb.velocity.y);
+		} else if (rb.velocity.x < 0) {
+			rb.velocity = new Vector2 (rb.velocity.x+1, rb.velocity.y);
+		}
+	}
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
