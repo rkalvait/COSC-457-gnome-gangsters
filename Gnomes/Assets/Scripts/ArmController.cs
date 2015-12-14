@@ -9,7 +9,7 @@ public class ArmController : MonoBehaviour {
     public float distFromCamera = 10.0f;
     public GameObject projectile;
     public GameObject projectile2;
-    float fireballSpeed = 25.0f;
+    float fireballSpeed = 50.0f;
     Vector3 mousePos;
     Vector3 anglePos;
 	// Use this for initialization
@@ -20,19 +20,9 @@ public class ArmController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        /*
-        Vector3 mousePos = Input.mousePosition;
-
-        //To make mousePos relative to center of screen
-        //mousePos.x -= Screen.width / 2;
-        //mousePos.y -= Screen.height / 2;
-
-        //To make mousePos relative to transform
-		mousePos -= cam.WorldToScreenPoint (transform.position);
-        angle = Vector3.Angle(mousePos, Vector3.up);
-        */
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+		mousePos = new Vector3 (mousePos.x, mousePos.y, 0);
         anglePos = Input.mousePosition;
         anglePos -= cam.WorldToScreenPoint(transform.position);
         angle = Vector3.Angle(anglePos, Vector3.up);
@@ -58,11 +48,16 @@ public class ArmController : MonoBehaviour {
         //Fire projectile
         if (Input.GetButtonDown("Fire1"))
         {
+
             GameObject clone;
             clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
             clone.transform.LookAt(mousePos);
+<<<<<<< HEAD
             //clone.GetComponent<Rigidbody2D>().AddForce(new Vector2(stupid.x, stupid.y) * fireballSpeed, 0);
             clone.GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(clone.transform.forward) * fireballSpeed;
+=======
+			clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
+>>>>>>> 80af7bac57905eda2d8f2218b44c3525ba64a876
 
         }
 

@@ -11,6 +11,10 @@ TagManager:
   - bounds
   - Block_Maker
   - NoCollide
+  - Impossibru
+  - Dorito
+  - Particle
+  - Doge
   layers:
   - Default
   - TransparentFX
@@ -23,8 +27,8 @@ TagManager:
   - Player
   - Arm
   - PProj
-  - 
-  - 
+  - FieldOfView
+  - Particle
   - 
   - 
   - 

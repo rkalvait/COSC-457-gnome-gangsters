@@ -6,7 +6,7 @@ public class BlockMaker : MonoBehaviour {
 	public int timer;
 	// Use this for initialization
 	void Start () {
-		timer = 100;
+		timer = 300;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +20,7 @@ public class BlockMaker : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.tag != "player") 
+		if (collision.tag != "player" && collision.tag != "Fireball" && collision.tag != "NoCollide" && collision.tag != "Block_Maker" && collision.tag != "Particle") 
 		{
 			DestroyAllObjects();
 			GameObject clone;
@@ -29,7 +29,6 @@ public class BlockMaker : MonoBehaviour {
 		}
 
 
-		Destroy (this.gameObject);
 	}
 
 	void DestroyAllObjects()

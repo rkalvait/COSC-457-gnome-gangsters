@@ -78,6 +78,7 @@ GameObject:
   - 95: {fileID: 9548694}
   - 114: {fileID: 11462186}
   - 60: {fileID: 6077218}
+  - 114: {fileID: 11476724}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -117,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.54999995, y: -.419999987, z: 0}
+  m_LocalPosition: {x: 73.9000015, y: .899999976, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 486168}
@@ -130,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -23.1000004, y: -.49000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 407082}
@@ -156,7 +157,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189502}
-  m_Mass: .870000005
+  m_Mass: .75
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: .850000024
@@ -275,7 +276,23 @@ MonoBehaviour:
   cam: {fileID: 0}
   distFromCamera: 10
   projectile: {fileID: 191754, guid: 8ea13528db37dc64a9ec315ab55fcf35, type: 2}
-  projectile2: {fileID: 0}
+  projectile2: {fileID: 127916, guid: 368d178f79270804f94a2e45f5739aa9, type: 2}
+--- !u!114 &11476724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a14ae5ea9ab7204fa9ead315a672aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHP: 100
+  currentHP: 0
+  Fill: {fileID: 0}
+  ScreenFade: {fileID: 0}
+  text: {fileID: 0}
 --- !u!212 &21265056
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -334,7 +351,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: isJumping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127612}
