@@ -52,12 +52,10 @@ public class ArmController : MonoBehaviour {
             GameObject clone;
             clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
             clone.transform.LookAt(mousePos);
-<<<<<<< HEAD
             //clone.GetComponent<Rigidbody2D>().AddForce(new Vector2(stupid.x, stupid.y) * fireballSpeed, 0);
             clone.GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(clone.transform.forward) * fireballSpeed;
-=======
+
 			clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
->>>>>>> 80af7bac57905eda2d8f2218b44c3525ba64a876
 
         }
 

@@ -62,7 +62,7 @@ public class bosstime : MonoBehaviour {
 		Vector3 dorito2d = new Vector3(dpos.x, dpos.y, 0);
 		Vector3 ppos = player.transform.position;
 		Vector3 player2d = new Vector3(ppos.x, ppos.y, 0);
-		dorito.GetComponent<Rigidbody2D>().velocity = (Vector2) Vector3.Normalize(ppos - dpos) * 50;
+		dorito.GetComponent<Rigidbody2D>().velocity = (Vector2) Vector3.Normalize(ppos - dpos) * 30;
 	}
 
 	public void CloseMouth() {
@@ -72,7 +72,7 @@ public class bosstime : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collision) {
 		if (!active) return;
 		if (collision.tag == "Fireball") {
-			HP -= 1;
+			HP -= 20;
 			if (HP <= 0) {
 
 				Destroy(gameObject);
