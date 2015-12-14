@@ -11,12 +11,14 @@ public class PlayerHP : MonoBehaviour {
 	public Image ScreenFade;
 	public Text text;
 	Slider healthSlider;
+    AudioSource audio;
 	bool dead;
 	// Use this for initialization
 	void Start () {
 		currentHP = startingHP;
 		healthSlider = GameObject.Find ("HealthSlider").GetComponent<Slider> ();
 		dead = false;
+        audio = GetComponent<AudioSource>();
 		//Fill = GameObject.Find ("HealthSlider").GetComponent<Slider> ().;
 	}
 	
@@ -42,6 +44,8 @@ public class PlayerHP : MonoBehaviour {
 	{
 		if (collision.tag == "Bullet") {
 			currentHP -= 10;
+            if(!dead)
+                audio.Play();
 		} else if (collision.tag == "Dorito") {
 			currentHP -= 10;
 		} else if (collision.tag == "Impossibru") {
