@@ -204,11 +204,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137920}
-  m_Text: '> tfw defeated by gnome
-
-    > feelsbadman.jpg
-
-    > '
+  m_Text: '> be me'
   m_OffsetZ: 0
   m_CharacterSize: .300000012
   m_LineSpacing: 1
@@ -355,11 +351,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Text
-      value: '> tfw defeated by gnome
-
-        > feelsbadman.jpg
-
-        > '
+      value: '> be me'
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_RichText

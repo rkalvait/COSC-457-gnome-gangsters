@@ -19,6 +19,7 @@ public class bosstime : MonoBehaviour {
 	public float FireDelay;
 	public bool ___________________;
 	GameObject TextBox;
+	TextMesh mesh;
 	bool fireType = false;
 	bool active = false;
 	int count = 0;
@@ -88,15 +89,13 @@ public class bosstime : MonoBehaviour {
 			this.audio.PlayOneShot(hitmarker);
 			HP -= 1;
 			if (HP <= 0) {
-
-				//Destroy(gameObject);
-
 				DeathSequence();
 			}
 			HPBar.transform.localScale = new Vector3(HP*0.7466026f/100f, HPBar.transform.localScale.y, HPBar.transform.localScale.z);
 		}
 	}
 
+	// Spawn the text box and change the text before he dies
 	void DeathSequence() {
 		switch (count) {
 		case 0:
@@ -105,10 +104,20 @@ public class bosstime : MonoBehaviour {
 			Destroy(HPBar_Parent);
 			TextBox = Instantiate(TextBoxPefab) as GameObject;
 			TextBox.transform.position = new Vector3(82.05f, -7.18f, -5.71f);
+			mesh = TextBox.GetComponentInChildren<TextMesh>() as TextMesh;
+			mesh.text = "> be me";
 			break;
 		case 1:
-			TextMesh mesh = TextBox.GetComponentInChildren<TextMesh>() as TextMesh;
-			mesh.text = ">rip in kill me";
+			mesh.text = mesh.text+"\n> in charge of keeping gnomes\n out of elf city";
+			break;
+		case 2:
+			mesh.text = mesh.text+"\n> tfw defeated";
+			break;
+		case 3:
+			mesh.text = "> feelsbadman.jpg";
+			break;
+		case 4:
+			mesh.text = mesh.text+"\n> rip in kill me";
 			break;
 		default:
 			GameObject f = Instantiate(PressFPrefab) as GameObject;
