@@ -9,6 +9,8 @@ public class bosstime : MonoBehaviour {
 	public GameObject DoritoPrefab;
 	public GameObject HPBar;
 	public GameObject HPBar_Parent;
+	public GameObject TextBoxPefab;
+	public GameObject PressFPrefab;
 	public Sprite openmouth;
 	public Sprite closemouth;
 	public GameObject imagined;
@@ -16,15 +18,23 @@ public class bosstime : MonoBehaviour {
 	public GameObject player;
 	public float FireDelay;
 	public bool ___________________;
+	GameObject TextBox;
 	bool fireType = false;
 	bool active = false;
+	int count = 0;
 	public int HP;
 	AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
 		audio = GetComponent<AudioSource> ();
-		HP = 100;
+		HP = 10;
+	}
+
+	void Update() {
+		if (Time.deltaTime == 0 && Input.GetKeyDown (KeyCode.Space)) {
+			DeathSequence();
+		}
 	}
 
 	public void WakeUp() {
@@ -79,15 +89,40 @@ public class bosstime : MonoBehaviour {
 			HP -= 1;
 			if (HP <= 0) {
 
-				Destroy(gameObject);
-				Destroy(HPBar_Parent);
+				//Destroy(gameObject);
+
+				DeathSequence();
 			}
 			HPBar.transform.localScale = new Vector3(HP*0.7466026f/100f, HPBar.transform.localScale.y, HPBar.transform.localScale.z);
 		}
 	}
 
+	void DeathSequence() {
+		switch (count) {
+		case 0:
+			Time.timeScale = 0;
+			PlayerController.CurrentMusic.GetComponent<AudioSource>().Pause ();
+			Destroy(HPBar_Parent);
+			TextBox = Instantiate(TextBoxPefab) as GameObject;
+			TextBox.transform.position = new Vector3(82.05f, -7.18f, -5.71f);
+			break;
+		case 1:
+			TextMesh mesh = TextBox.GetComponentInChildren<TextMesh>() as TextMesh;
+			mesh.text = ">rip in kill me";
+			break;
+		default:
+			GameObject f = Instantiate(PressFPrefab) as GameObject;
+			f.GetComponent<PressF>().TextBox = TextBox;
+			Time.timeScale = 1;
+			Destroy(gameObject);
+			break;
+		}
+
+		count++;
+	}
+
 	void OnDestroy() {
-		Debug.Log("DED");
+
 		if (!ShreckMusic.shrekstarted) {
 			imagined.GetComponent<AudioSource> ().UnPause ();
 			PlayerController.CurrentMusic = imagined;
