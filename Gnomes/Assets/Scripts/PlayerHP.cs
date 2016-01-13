@@ -32,12 +32,14 @@ public class PlayerHP : MonoBehaviour {
 		if (currentHP == 0) {
 			Fill.color = Color.black;
 		}
-		if (dead) {
+		/*
+		//if (dead) {
 			if(Input.GetButtonDown("Fire1"))
 			{
 				Application.LoadLevel("_Scene_ManScreen");
 			}
 		}
+		*/
 	}
 
 	void OnTriggerEnter2D(Collider2D collision)
@@ -57,7 +59,8 @@ public class PlayerHP : MonoBehaviour {
 
 		if (currentHP <= 0) {
 			Debug.Log("You are dead!");
-			playerDeath();
+			Application.LoadLevel("_Scene_GetRekt");
+			//playerDeath();
 		}
 	}
 
