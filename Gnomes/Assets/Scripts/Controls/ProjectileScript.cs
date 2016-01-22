@@ -7,7 +7,7 @@ public class ProjectileScript : MonoBehaviour {
 	public GameObject projectile2;
 	// Use this for initialization
 	void Start () {
-        timer = 100;
+        timer = 1000;
 	}
 	
 	// Update is called once per frame

@@ -14,6 +14,9 @@ public class ArmController : MonoBehaviour {
     Vector3 mousePos;
     Vector3 anglePos;
 	AudioSource audio;
+	public bool chargeShot = true;
+	bool charging = false;
+	GameObject chargeClone;
 	// Use this for initialization
 	void Start () {
 		this.audio = GetComponent<AudioSource> ();
@@ -48,18 +51,47 @@ public class ArmController : MonoBehaviour {
         
 
         //Fire projectile
-        if (Input.GetButtonDown("Fire1"))
-        {
-			this.audio.PlayOneShot(airhorn);
-            GameObject clone;
-            clone = (GameObject) Instantiate(projectile, transform.position, transform.rotation);
-            clone.transform.LookAt(mousePos);
-            //clone.GetComponent<Rigidbody2D>().AddForce(new Vector2(stupid.x, stupid.y) * fireballSpeed, 0);
-            clone.GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(clone.transform.forward) * fireballSpeed;
+        if (Input.GetButtonDown ("Fire1") && !chargeShot) {
+			this.audio.PlayOneShot (airhorn);
+			GameObject clone;
+			Vector3 transformForward = transform.position+Vector3.Normalize(anglePos);
+			clone = (GameObject)Instantiate (projectile, transformForward, transform.rotation);
+			clone.transform.LookAt (mousePos);
+			//clone.GetComponent<Rigidbody2D>().AddForce(new Vector2(stupid.x, stupid.y) * fireballSpeed, 0);
 
-			clone.GetComponent<Rigidbody2D>().velocity = clone.transform.forward * fireballSpeed;
+			clone.GetComponent<Rigidbody2D> ().velocity = Vector3.Normalize (clone.transform.forward) * fireballSpeed;
 
-        }
+			clone.GetComponent<Rigidbody2D> ().velocity = clone.transform.forward * fireballSpeed;
+
+		} 
+
+		//For charge shot, start charging
+		else if (Input.GetButtonDown ("Fire1") && chargeShot) {
+			charging = true;
+			Vector3 transformForward = transform.position+Vector3.Normalize(anglePos);
+			chargeClone = (GameObject)Instantiate(projectile, transformForward, transform.rotation);
+			chargeClone.transform.LookAt (mousePos);
+			chargeClone.transform.localScale -= new Vector3(0.3f, 0.3f, 0.3f);
+
+		}
+		//continue charging
+		if (Input.GetButton ("Fire1") && charging) {
+			Vector3 transformForward = transform.position+Vector3.Normalize(anglePos);
+			chargeClone.transform.position = transformForward;
+			chargeClone.transform.LookAt (mousePos);
+			if(chargeClone.transform.localScale.x <= 2f)
+			{
+				chargeClone.transform.localScale += new Vector3(0.03f, 0.03f, 0.03f);
+			}
+		}
+		//fire charge shot
+		if (Input.GetButtonUp ("Fire1") && charging) {
+			charging = false;
+			chargeClone.GetComponent<Rigidbody2D> ().velocity = Vector3.Normalize (chargeClone.transform.forward) * fireballSpeed;
+			
+			chargeClone.GetComponent<Rigidbody2D> ().velocity = chargeClone.transform.forward * fireballSpeed;
+		}
+
 
         if (Input.GetButtonDown("Fire2"))
         {
@@ -68,6 +100,7 @@ public class ArmController : MonoBehaviour {
             clone.transform.LookAt(mousePos);
 			clone.GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(clone.transform.forward) * fireballSpeed;
         }
+
     }
 
 }
