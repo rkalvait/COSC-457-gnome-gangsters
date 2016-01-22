@@ -96,7 +96,11 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
+<<<<<<< HEAD
   productGUID: a721c969d0ffc5b43ad8282ae22d372b
+=======
+  productGUID: 6b87300fa5740534a9c9c21eff690b96
+>>>>>>> e6ed2b39bd4e57754a302e1a66ac38c62cb799c7
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -263,6 +267,7 @@ PlayerSettings:
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
   ps4ReprojectionSupport: 0
+<<<<<<< HEAD
   ps4UseAudio3dBackend: 0
   ps4SocialScreenEnabled: 0
   ps4Audio3dVirtualSpeakerCount: 14
@@ -270,6 +275,8 @@ PlayerSettings:
   ps4PatchPkgPath: 
   ps4PatchLatestPkgPath: 
   ps4PatchChangeinfoPath: 
+=======
+>>>>>>> e6ed2b39bd4e57754a302e1a66ac38c62cb799c7
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0

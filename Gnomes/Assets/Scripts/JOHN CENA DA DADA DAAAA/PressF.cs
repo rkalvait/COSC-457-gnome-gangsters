@@ -10,7 +10,7 @@ public class PressF : MonoBehaviour {
 	void Update () {
 		if (PlayerNear && Input.GetKeyDown (KeyCode.F)) {
 			TextMesh mesh = TextBox.GetComponentInChildren<TextMesh>() as TextMesh;
-			mesh.text = "you pay your respects.";
+			mesh.text = "> you pay you're respects.";
 		}
 	}
 
