@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: cdef348ec93c3b947bb1a4c748efe8ad
+timeCreated: 1454652553
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Waves3_0
+    21300002: Waves3_1
+    21300004: Waves3_2
+    21300006: Waves3_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Waves3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 400
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -156, y: -32}
+        - {x: -200, y: -42}
+        - {x: -200, y: -96}
+        - {x: 200, y: -96}
+        - {x: 200, y: -37}
+        - {x: 174, y: -32}
+    - name: Waves3_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1000
+        width: 400
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 194, y: -62}
+        - {x: 195, y: -61}
+        - {x: 198, y: -56}
+        - {x: 200, y: -52}
+        - {x: 200, y: -35}
+        - {x: -178, y: -35}
+        - {x: -200, y: -54}
+        - {x: -200, y: -96}
+        - {x: 200, y: -96}
+        - {x: 200, y: -57}
+        - {x: 199, y: -57}
+    - name: Waves3_2
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1000
+        width: 400
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: -27}
+        - {x: -41, y: -39}
+        - {x: -54, y: -54}
+        - {x: -56, y: -53}
+        - {x: -57, y: -55}
+        - {x: -50, y: -47}
+        - {x: -42, y: -40}
+        - {x: -45, y: -31}
+        - {x: -57, y: -27}
+        - {x: -165, y: -27}
+        - {x: -194, y: -48}
+        - {x: -200, y: -55}
+        - {x: -200, y: -96}
+        - {x: 18, y: -97}
+        - {x: 172, y: -97}
+        - {x: 200, y: -96}
+        - {x: 200, y: -37}
+        - {x: 194, y: -27}
+    - name: Waves3_3
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1000
+        width: 400
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -153, y: -24}
+        - {x: -200, y: -34}
+        - {x: -200, y: -96}
+        - {x: 195, y: -97}
+        - {x: 200, y: -97}
+        - {x: 200, y: -35}
+        - {x: 142, y: -24}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
